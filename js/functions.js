@@ -130,7 +130,8 @@ $(document).ready(function () {
        timeout: 5000,     
        success: function (data,status,xhr) {   // success
            $('.city-name').html(cityVal[2]);
-           $('.city-temperature').html(String(data.main.temp).slice(0,2)+' °C');
+           mainTemp = String(data.main.temp).split('.')
+           $('.city-temperature').html(mainTemp[0]+' °C');
            $('.city-conditions').html(data.weather[0].description);
        },
        error: function (jqXhr, textStatus, errorMessage) { // error callback 
@@ -191,9 +192,9 @@ $(document).ready(function () {
                         dayDate = data.list[index].dt_txt;
                         dayDate = dayDate.slice(11, 16);
                         time = data.list[index].dt_txt.slice(11, 13);
-                        Temp = String(data.list[index].main.temp).slice(0,2);
+                        Temp = String(data.list[index].main.temp).split('.');
                         
-                        $('.day-'+numDay+' .date-content').append("<div id='date-"+index+"' class='date-panel'> <div class='day-date'>"+dayDate+"</div><div class='day-conditions'><img src='img/animated/"+conditions+timeDay(time)+".svg'></div><div class='day-temperature'> <div class='label-max-temperature'>Temp</div><div class='data-max-temperature'><span>"+Temp+"</span>°C</div></div></div>");
+                        $('.day-'+numDay+' .date-content').append("<div id='date-"+index+"' class='date-panel'> <div class='day-date'>"+dayDate+"</div><div class='day-conditions'><img src='img/animated/"+conditions+timeDay(time)+".svg'></div><div class='day-temperature'> <div class='label-max-temperature'>Temp</div><div class='data-max-temperature'><span>"+Temp[0]+"</span>°C</div></div></div>");
                     } else {
                         newdate1 = DataDate
                         numDay = numDay + 1;
