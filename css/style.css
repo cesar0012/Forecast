@@ -1,0 +1,426 @@
+body {
+    margin: 0px;
+    font-family: poppins;
+}
+
+.header {
+    background: #9cbfd1;
+}
+
+.header-div {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+    align-items: center;
+}
+
+.header-select {
+    display: flex;
+}
+
+    .header-select select {
+        color: #78859c;
+        font-size: 17px;
+        font-weight: 500;
+        background-color: #ffffff;
+        padding: 10px 15px;
+        border-radius: 0px 15px 15px 0px;
+        border: 1px solid #ffffff;
+    }
+
+.header-Title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.label {
+    color: #ffffff;
+    font-weight: 500;
+    background-color: #5e82f4;
+    padding: 10px 15px;
+    border-radius: 15px 0px 0px 15px;
+}
+
+.content-div {
+    display: none;
+}
+
+.placeholder {
+    color: #e3e3e3;
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+    padding: 100px 0px;
+}
+
+.content {
+    padding: 50px 50px;
+}
+
+.date-picker {
+    display: flex;
+    justify-content: center;
+}
+
+.date-select {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 14px;
+    background-color: #a0a0a0;
+    padding: 10px 30px;
+    border-radius: 15px;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+.date-select.active {
+    background-color: #5e82f4;
+}
+
+.panel {
+    display: flex;
+    margin-top: 35px;
+}
+
+.panel-today {
+    border: 1px solid #e3e3e3;
+    border-radius: 15px;
+    padding: 20px 30px;
+    margin-right: 20px;
+    box-shadow: 5px 5px 10px 1px #f1f1f1;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.panel-day {
+    width: 85%;
+}
+
+.date-content {
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid #e3e3e3;
+    border-radius: 0px 0px 15px 15px;
+    padding: 20px 0px;
+    margin-right: 20px;
+    box-shadow: 5px 5px 10px 1px #f1f1f1;
+    width: 100%;
+}
+
+.city-title {
+    color: #5e82f4;
+    font-weight: 700;
+    text-align: center;
+}
+
+.city-name {
+    color: #5e82f4;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.city-temperature {
+    color: #5e82f4;
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.city-conditions {
+    color: #5e82f4;
+    font-weight: 600;
+    text-align: center;
+}
+
+.day-div {
+    display: none;
+}
+
+.day-div.active {
+    display: block;
+}
+
+.day-conditions img {
+    width: 75px;
+}
+
+.header-fecha {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 17px;
+    text-align: center;
+    background-color: #5e82f4;
+    padding: 10px 0px;
+    border-radius: 15px 15px 0px 0px;
+    cursor: pointer;
+    width: 100%;
+    border: 1px solid #5e82f4;
+}
+
+.day-date {
+    text-align: center;
+    color: #727272;
+    font-weight: 600;
+}
+
+.label-max-temperature {
+    text-align: center;
+    color: #727272;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.data-max-temperature {
+    text-align: center;
+    color: #5e82f4;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.data-max-temperature span {
+    margin-right: 3px;
+}
+
+@media only screen and (max-width: 1110px) {
+    .city-title {
+        font-size: 14px;
+    }
+
+    .city-temperature {
+        color: #5e82f4;
+        font-size: 40px;
+        font-weight: 600;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 915px) {
+    .panel {
+        display: flex;
+        margin-top: 30px;
+        flex-direction: column;
+    }
+
+    .panel-today {
+        font-size: 14px;
+        border: 1px solid #e3e3e3;
+        border-radius: 15px;
+        padding: 0px 0px;
+        margin-right: 20px;
+        box-shadow: 5px 5px 10px 1px #f1f1f1;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .city-temperature {
+        color: #5e82f4;
+        font-size: 35px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .city-name {
+        color: #5e82f4;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 0px;
+    }
+
+    .content {
+        padding: 30px 25px;
+    }
+
+    .panel-day {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 790px) {
+    .date-select {
+        color: #ffffff;
+        font-weight: 500;
+        font-size: 14px;
+        background-color: #a0a0a0;
+        padding: 10px 15px;
+        border-radius: 15px;
+        margin: 0px 10px;
+        cursor: pointer;
+    }
+
+    .header-select {
+        display: flex;
+        align-items: center;
+    }
+
+    .label {
+        font-size: 12px;
+    }
+
+    .header-select select {
+        color: #78859c;
+        font-size: 12px;
+        font-weight: 500;
+        background-color: #ffffff;
+        padding: 9px 15px;
+        border-radius: 0px 15px 15px 0px;
+        border: 1px solid #ffffff;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .header-div {
+        padding: 10px 25px;
+    }
+
+    .content {
+        padding: 50px 25px;
+    }
+
+    .day-date {
+        font-size: 13px;
+    }
+
+    .day-conditions img {
+        width: 65px;
+    }
+
+    .label-max-temperature {
+        text-align: center;
+        color: #727272;
+        font-size: 11px;
+        font-weight: 500;
+        margin-top: 10px;
+    }
+
+    .data-max-temperature {
+        text-align: center;
+        color: #5e82f4;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .date-select {
+        font-size: 12px;
+    }
+
+    .header-fecha {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .date-content {
+        display: flex;
+        justify-content: space-evenly;
+        border: 1px solid #e3e3e3;
+        border-radius: 0px 0px 15px 15px;
+        padding: 20px 0px;
+        margin-right: 20px;
+        box-shadow: 5px 5px 10px 1px #f1f1f1;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .day-date {
+        font-size: 20px;
+    }
+
+    .day-conditions {
+        text-align: center;
+    }
+
+    .day-conditions img {
+        width: 100px;
+    }
+
+    .label-max-temperature {
+        font-size: 17px;
+        margin-top: 0px;
+    }
+
+    .data-max-temperature {
+        font-size: 30px;
+        
+    }
+
+    .date-panel {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-bottom: 1px solid #d9d9d9;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+    }
+    
+}
+
+@media only screen and (max-width: 545px) {
+    .date-select {
+        font-size: 11px;
+        margin: 0px 5px;
+    }
+
+    .city-title {
+        display: none;
+    }
+
+    .header-Title {
+        font-size: 17px;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    .date-select {
+        font-size: 10px;
+    }
+
+    .label {
+        font-size: 10px;
+    }
+
+    .header-select select {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+
+    .date-select {
+        font-size: 9px;
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+
+    .label {
+        display: none;
+    }
+
+    .header-select select {
+        border-radius: 15px;
+    }
+
+    .date-picker {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (max-width: 435px) {
+
+    .date-select {
+        text-align: center;
+        padding: 10px;
+    }
+
+}
